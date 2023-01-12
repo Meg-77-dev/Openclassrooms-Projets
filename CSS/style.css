@@ -1,0 +1,265 @@
+* Projet-OhMyFood {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  margin: auto;
+  padding: 40px;
+  font-family: Roboto;
+  max-width: 1400px;
+  height: 1000px;
+}
+
+header .logo-ohmyfood-header {
+  text-align: center;
+}
+
+main img {
+  width: 180px;
+  height: 40px;
+}
+main .barre__localisation {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #C0C0C0;
+  filter: brightness(125%);
+  gap: 12px;
+  font-size: 18px;
+  font-family: Roboto;
+}
+main .barre__localisation i {
+  cursor: pointer;
+}
+main .presentation-fonctionnement {
+  display: flex;
+  gap: 300px;
+}
+main .presentation-fonctionnement .presentation {
+  font-family: Roboto;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+main .presentation-fonctionnement .button__explorer {
+  background-image: linear-gradient(355deg, #9356DC, #FF79DA);
+  border: 1px;
+  border-radius: 30px;
+  box-shadow: 0px 5px 12px gray;
+  width: 200px;
+  height: 60px;
+  color: white;
+  font-family: Roboto;
+  margin-top: 30px;
+  cursor: pointer;
+  transform: scale(1);
+}
+main .presentation-fonctionnement .button__explorer:hover {
+  transform: scale(1.1);
+  filter: brightness(120%);
+  box-shadow: 10px 10px 10px grey;
+}
+main .presentation-fonctionnement .fonctionnement {
+  font-family: Roboto;
+  width: 50%;
+  padding-top: 40px;
+}
+main .presentation-fonctionnement .fonctionnement__etape {
+  border: 1px solid #C0C0C0;
+  background-color: #C0C0C0;
+  filter: brightness(130%);
+  border-radius: 20px;
+  box-shadow: 0px 10px 12px gray;
+  margin-bottom: 25px;
+  width: 70%;
+  height: 40px;
+  display: flex;
+  gap: 20px;
+  padding-left: 20px;
+  padding-top: 25px;
+  cursor: pointer;
+  transform: scale(1);
+}
+main .presentation-fonctionnement .fonctionnement__etape i {
+  color: #9356DC;
+  filter: brightness(50%);
+}
+main .presentation-fonctionnement .fonctionnement__etape:hover {
+  border: 1px;
+  transform: scale(1.03);
+}
+main .presentation-fonctionnement .conteneur__etape {
+  margin-left: -24px;
+  counter-reset: puces;
+  display: flex;
+  flex-direction: column;
+}
+main .presentation-fonctionnement li {
+  list-style-type: none;
+  counter-increment: puces;
+}
+main .presentation-fonctionnement li:before {
+  content: counter(puces);
+  background-color: #9356DC;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 23px;
+  margin-left: -29px;
+}
+main .Restaurants {
+  width: 100%;
+}
+main .Restaurants .conteneur__cards__resto {
+  display: flex;
+  gap: 50px;
+  width: 100%;
+}
+main .Restaurants .new {
+  position: relative;
+}
+main .Restaurants .new::before {
+  content: "Nouveau";
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background-color: #99E2D0;
+  color: darkgreen;
+  width: 80px;
+  height: 20px;
+  text-align: center;
+}
+main .Restaurants .restaurant__card {
+  border: 1px solid #C0C0C0;
+  width: 40%;
+  height: 270px;
+  border-radius: 10%;
+  box-shadow: 6px 6px 7px #C0C0C0;
+  text-decoration: none;
+  color: black;
+  transform: scale(1);
+}
+main .Restaurants .restaurant__card:hover {
+  transform: scale(1.08);
+}
+main .Restaurants .restaurant__card img {
+  width: 100%;
+  height: 75%;
+  border-radius: 10% 10% 0% 0%;
+}
+main .Restaurants .restaurant__card .descrip-resto {
+  margin-top: 2px;
+  margin-left: 20px;
+  line-height: 4px;
+}
+main .Restaurants .restaurant__card .lieu {
+  font-size: 14px;
+}
+main .Restaurants .restaurant__card .coeur-non-rempli {
+  font-size: 23px;
+  float: right;
+  position: relative;
+  bottom: 27px;
+  right: 20px;
+  opacity: 1;
+  pointer-events: none;
+}
+main .Restaurants .restaurant__card .coeur-non-rempli:hover {
+  opacity: 1;
+  color: #9356DC;
+  background-image: #9356DC;
+}
+main .Restaurants .restaurant__card .coeur-rempli {
+  font-size: 23px;
+  float: right;
+  position: relative;
+  bottom: 27px;
+  right: -3px;
+  opacity: 0;
+  transition: all 400ms;
+}
+main .Restaurants .restaurant__card .coeur-rempli:hover {
+  opacity: 1;
+  color: #9356DC;
+  background-image: #9356DC;
+  transform: scale(1.1);
+}
+
+footer {
+  width: 100%;
+  height: 20%;
+  margin-top: 40px;
+  background-color: #353535;
+  color: white;
+  padding-top: 15px;
+}
+footer .logo-text-footer {
+  font-family: Shrikhand;
+  font-size: 33px;
+  margin-left: 38px;
+  color: white;
+}
+footer .list-puces-footer {
+  list-style-type: none;
+}
+footer .icone-proposer {
+  padding-right: 10px;
+}
+footer .icone-devenir {
+  padding-right: 5px;
+}
+
+@media screen and (max-width: 990px) {
+  main .presentation-fonctionnement {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  main .presentation-fonctionnement .presentation {
+    width: 100%;
+  }
+  main .presentation-fonctionnement .fonctionnement {
+    width: 100%;
+  }
+  main .presentation-fonctionnement .conteneur__etape {
+    display: flex;
+    flex-direction: row;
+    gap: 71px;
+  }
+  main .presentation-fonctionnement .fonctionnement__etape {
+    width: 100%;
+  }
+  main .Restaurants .conteneur__cards__resto {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  main .Restaurants .conteneur__cards__resto .restaurant__card {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 750px) {
+  main .fonctionnement .conteneur__etape {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  main .Restaurants .conteneur__cards__resto .restaurant__card {
+    width: 100%;
+    border-radius: 30px;
+  }
+  main .Restaurants .conteneur__cards__resto img {
+    border-radius: 30px 30px 0px 0px;
+  }
+}/*# sourceMappingURL=style.css.map */
