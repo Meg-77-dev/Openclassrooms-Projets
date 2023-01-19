@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "sass": "^1.57.1"
+  },
+  "name": "projet3-ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3 OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meg-77-dev/Openclassrooms-Projets.git"
+  },
+  "author": "Megan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Meg-77-dev/Openclassrooms-Projets/issues"
+  },
+  "homepage": "https://github.com/Meg-77-dev/Openclassrooms-Projets#readme"
+}

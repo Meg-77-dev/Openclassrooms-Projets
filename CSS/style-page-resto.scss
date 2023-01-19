@@ -4,21 +4,32 @@ $color-tertiary: #99E2D0;
 $color-gray-light: #C0C0C0;
 $color-quartary:gray;
 
+@keyframes anim-menu  {
+0% {
+    transform: translateY(0);
+    opacity: 0;
+}
+100%{
+    transform: translateY(1);
+    opacity: 1;
+}
+}
+
 * Projet-OhMyFood {
     margin: 0;
     padding: 0;
     text-decoration: none;
   }
   
-  body {
+body {
     margin: auto;
     padding: 40px;
     font-family: Roboto;
     max-width: 1400px;
     height: 1000px;
-  }
+}
   
-  header {
+header {
     display: flex;
     margin-bottom: 10px;
     width: 100%;
@@ -38,28 +49,28 @@ main{
     img{
         width: 100%;
         height: 439px;
-    }.conteneur__nom-resto_coeur{
+    }
+    .conteneur__nom-resto_coeur{
         display: flex;
         align-items: center;
         gap: 10px; 
         i
         {
-    font-size: 23px;
+        font-size: 23px;
         }
-    }
-    .Nom-resto{
+        }
+        .Nom-resto{
         font-family: Shrikhand;
-    }
-    .coeur-non-rempli{
+        }
+        .coeur-non-rempli{
         position: relative;
         opacity:1;
         &:hover{
             opacity: 1; 
             color:$color-primary;
             background-color: $color-primary;
-
-    }
-}
+        }
+        }
     .coeur-rempli{
         position: relative;
         right: 33px; 
@@ -94,7 +105,7 @@ main{
         padding-bottom: 10px;
     }
     .card{
-        border: 1px solid $color-gray-light;
+        border: 0px solid $color-gray-light;
         background-color: $color-gray-light;
         filter:brightness(130%);
         border-radius: 20px;
@@ -103,16 +114,100 @@ main{
         width: 85%;
         height: 70px;
         padding-left: 20px;
-        line-height: 2px;
+        display: flex;
+        overflow: hidden;
+        animation: anim-menu ease 1s both;
+        /*boucle pour le délai de l'animation*/
+        @for $i from 1 through 5{
+            &:nth-child(#{$i}){
+                animation-delay: 400ms *$i
+            }
+        }
+        .descrip-entree{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            .Nom__de_l_entree{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            }
+            .accompagnement-entree{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-top: -21px;
+            }
+        }
+        .descrip-plat{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            .Nom__du__plat{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            }
+            .accompagnement-plat{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-top: -21px;
+            }
+        }
+        .descrip-dessert{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            .Nom__du__dessert{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            }
+            .accompagnement-dessert{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-top: -21px;
+            }
+        }
+        &:hover .card__checkbox{
+            margin-right: 0; 
+        }
+        &:hover .icone-check{
+            transform: rotate(360deg);
+        }
+        }
         .prix{
             font-weight: bold;
-            float: right;
-            margin-right: 25px;
+            margin-left: auto;
+            padding-top: 40px; 
+            padding-right: 23px;
         }
     }
+        .card__checkbox{
+            background-color: $color-tertiary;
+            filter: brightness(75%);
+            border-radius: 0px 20px 20px 0px;
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            line-height: 72px;
+            font-size: 27px;
+            color: white;
+            margin-right: -72px; 
+            transition: all 1s;
+            &:hover .icone-check {
+                transform: rotate(360deg);
+            }
+            .icone-check{
+                transition-duration: 1s;
+                transition-property: transform;
+        }
+     }
     }
-    .button__commander
-    {
+        .button__commander
+        {
         background-image: linear-gradient(355deg, $color-primary, $color-secondary);
         border: 1px;
         border-radius: 50px;
@@ -127,9 +222,10 @@ main{
         transform: scale(1);
         &:hover{
             transform: scale(1.1);
+            filter: brightness(120%);
+            box-shadow: 10px 10px 10px grey;
         }
     }
-}
 footer
 {
     width: 100%;
@@ -146,6 +242,10 @@ footer
     }
     .list-puces-footer{
         list-style-type: none;
+        a{
+            color:white;
+            text-decoration: none; 
+        }
     }
     .icone-proposer{
         padding-right: 10px; 

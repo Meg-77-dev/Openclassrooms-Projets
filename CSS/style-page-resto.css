@@ -1,3 +1,24 @@
+@charset "UTF-8";
+@-webkit-keyframes anim-menu {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(1);
+    opacity: 1;
+  }
+}
+@keyframes anim-menu {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(1);
+    opacity: 1;
+  }
+}
 * Projet-OhMyFood {
   margin: 0;
   padding: 0;
@@ -87,7 +108,7 @@ main .conteneur_entrees_plats_desserts .menu-categorie {
   padding-bottom: 10px;
 }
 main .conteneur_entrees_plats_desserts .card {
-  border: 1px solid #C0C0C0;
+  border: 0px solid #C0C0C0;
   background-color: #C0C0C0;
   filter: brightness(130%);
   border-radius: 20px;
@@ -96,14 +117,114 @@ main .conteneur_entrees_plats_desserts .card {
   width: 85%;
   height: 70px;
   padding-left: 20px;
-  line-height: 2px;
+  display: flex;
+  overflow: hidden;
+  -webkit-animation: anim-menu ease 1s both;
+          animation: anim-menu ease 1s both;
+  /*boucle pour le délai de l'animation*/
 }
-main .conteneur_entrees_plats_desserts .card .prix {
+main .conteneur_entrees_plats_desserts .card:nth-child(1) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+main .conteneur_entrees_plats_desserts .card:nth-child(2) {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+main .conteneur_entrees_plats_desserts .card:nth-child(3) {
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+main .conteneur_entrees_plats_desserts .card:nth-child(4) {
+  -webkit-animation-delay: 1600ms;
+          animation-delay: 1600ms;
+}
+main .conteneur_entrees_plats_desserts .card:nth-child(5) {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+main .conteneur_entrees_plats_desserts .card .descrip-entree {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .conteneur_entrees_plats_desserts .card .descrip-entree .Nom__de_l_entree {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .conteneur_entrees_plats_desserts .card .descrip-entree .accompagnement-entree {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: -21px;
+}
+main .conteneur_entrees_plats_desserts .card .descrip-plat {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .conteneur_entrees_plats_desserts .card .descrip-plat .Nom__du__plat {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .conteneur_entrees_plats_desserts .card .descrip-plat .accompagnement-plat {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: -21px;
+}
+main .conteneur_entrees_plats_desserts .card .descrip-dessert {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .conteneur_entrees_plats_desserts .card .descrip-dessert .Nom__du__dessert {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .conteneur_entrees_plats_desserts .card .descrip-dessert .accompagnement-dessert {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: -21px;
+}
+main .conteneur_entrees_plats_desserts .card:hover .card__checkbox {
+  margin-right: 0;
+}
+main .conteneur_entrees_plats_desserts .card:hover .icone-check {
+  transform: rotate(360deg);
+}
+main .conteneur_entrees_plats_desserts .prix {
   font-weight: bold;
-  float: right;
-  margin-right: 25px;
+  margin-left: auto;
+  padding-top: 40px;
+  padding-right: 23px;
 }
-main .button__commander {
+main .card__checkbox {
+  background-color: #99E2D0;
+  filter: brightness(75%);
+  border-radius: 0px 20px 20px 0px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 72px;
+  font-size: 27px;
+  color: white;
+  margin-right: -72px;
+  transition: all 1s;
+}
+main .card__checkbox:hover .icone-check {
+  transform: rotate(360deg);
+}
+main .card__checkbox .icone-check {
+  transition-duration: 1s;
+  transition-property: transform;
+}
+
+.button__commander {
   background-image: linear-gradient(355deg, #9356DC, #FF79DA);
   border: 1px;
   border-radius: 50px;
@@ -117,8 +238,10 @@ main .button__commander {
   cursor: pointer;
   transform: scale(1);
 }
-main .button__commander:hover {
+.button__commander:hover {
   transform: scale(1.1);
+  filter: brightness(120%);
+  box-shadow: 10px 10px 10px grey;
 }
 
 footer {
@@ -137,6 +260,10 @@ footer .logo-text-footer {
 }
 footer .list-puces-footer {
   list-style-type: none;
+}
+footer .list-puces-footer a {
+  color: white;
+  text-decoration: none;
 }
 footer .icone-proposer {
   padding-right: 10px;

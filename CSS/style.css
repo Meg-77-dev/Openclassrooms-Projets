@@ -1,3 +1,61 @@
+@-webkit-keyframes loading {
+  0% {
+    opacity: 0.9;
+    z-index: 1;
+  }
+  30% {
+    opacity: 0.9;
+    z-index: 1;
+  }
+  50% {
+    opacity: 0.7;
+    z-index: 1;
+  }
+  80% {
+    opacity: 0.3;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 0.9;
+    z-index: 1;
+  }
+  30% {
+    opacity: 0.9;
+    z-index: 1;
+  }
+  50% {
+    opacity: 0.7;
+    z-index: 1;
+  }
+  80% {
+    opacity: 0.3;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes spinner {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+@keyframes spinner {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
 * Projet-OhMyFood {
   margin: 0;
   padding: 0;
@@ -10,6 +68,44 @@ body {
   font-family: Roboto;
   max-width: 1400px;
   height: 1000px;
+}
+
+.loading {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: #C0C0C0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: loading 3s forwards;
+          animation: loading 3s forwards;
+}
+.loading .cercle {
+  position: absolute;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  border: 10px solid #99E2D0;
+  z-index: 2;
+}
+.loading .spinner {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  border: 10px dotted #FF79DA;
+  -webkit-animation: spinner 1s ease-in-out 400ms 2 forwards;
+          animation: spinner 1s ease-in-out 400ms 2 forwards;
+  z-index: 2;
+}
+.loading .icone-dinner {
+  position: absolute;
+  font-size: 60px;
+  color: #9356DC;
+  z-index: 2;
 }
 
 header .logo-ohmyfood-header {
@@ -173,7 +269,6 @@ main .Restaurants .restaurant__card .coeur-non-rempli {
   bottom: 27px;
   right: 20px;
   opacity: 1;
-  pointer-events: none;
 }
 main .Restaurants .restaurant__card .coeur-non-rempli:hover {
   opacity: 1;
@@ -212,6 +307,10 @@ footer .logo-text-footer {
 }
 footer .list-puces-footer {
   list-style-type: none;
+}
+footer .list-puces-footer a {
+  color: white;
+  text-decoration: none;
 }
 footer .icone-proposer {
   padding-right: 10px;
