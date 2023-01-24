@@ -29,9 +29,9 @@ $color-quartary:gray;
   }
   @keyframes spinner {
       from{
-          rotate:(0deg);
+          transform: rotate(0deg);
       }
-      to{ rotate:(360deg);
+      to{ transform: rotate(360deg);
       }
   }
 *Projet-OhMyFood
@@ -53,13 +53,15 @@ body{
     top: 0px;
     bottom: 0px;
     right: 0px;
+    height: 1160px;
     background-color: $color-gray-light;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: loading 3s forwards;
+    animation: loading 2s forwards;
         .cercle{
             position: absolute;
+            top: 300px;
             border-radius:50%;
             width:160px;
             height:160px;
@@ -71,12 +73,14 @@ body{
             width: 120px;
             height: 120px;
             position: absolute;
+            top: 320px;
             border: 10px dotted $color-secondary;
-            animation: spinner 1s ease-in-out 400ms 2 forwards;
+            animation: spinner 2s ease-in-out 100ms 2 forwards;
             z-index: 2;
         }
         .icone-dinner{
             position: absolute;
+            top: 360px; 
             font-size: 60px;
             color:$color-primary;
             z-index: 2;
@@ -256,7 +260,6 @@ main{
     &:hover{
         opacity: 1; 
         color:$color-primary;
-        background-image: $color-primary;
     }
     }
     .coeur-rempli{
@@ -270,7 +273,6 @@ main{
         &:hover{
             opacity: 1;
             color: $color-primary; 
-            background-image: $color-primary;
             transform: scale(1.1);
         }
     }

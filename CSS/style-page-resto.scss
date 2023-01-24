@@ -10,7 +10,7 @@ $color-quartary:gray;
     opacity: 0;
 }
 100%{
-    transform: translateY(1);
+    transform: translateY(0);
     opacity: 1;
 }
 }
@@ -79,7 +79,6 @@ main{
     &:hover{
             opacity: 1;
             color: $color-primary; 
-            background-image: $color-primary;
             transform: scale(1.1);
     }
 }
@@ -196,12 +195,12 @@ main{
             font-size: 27px;
             color: white;
             margin-right: -72px; 
-            transition: all 1s;
+            transition: all 500ms;
             &:hover .icone-check {
                 transform: rotate(360deg);
             }
             .icone-check{
-                transition-duration: 1s;
+                transition-duration: 500ms;
                 transition-property: transform;
         }
      }

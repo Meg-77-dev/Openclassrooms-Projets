@@ -42,18 +42,18 @@
 }
 @-webkit-keyframes spinner {
   from {
-    rotate: 0deg;
+    transform: rotate(0deg);
   }
   to {
-    rotate: 360deg;
+    transform: rotate(360deg);
   }
 }
 @keyframes spinner {
   from {
-    rotate: 0deg;
+    transform: rotate(0deg);
   }
   to {
-    rotate: 360deg;
+    transform: rotate(360deg);
   }
 }
 * Projet-OhMyFood {
@@ -76,15 +76,17 @@ body {
   top: 0px;
   bottom: 0px;
   right: 0px;
+  height: 1160px;
   background-color: #C0C0C0;
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-animation: loading 3s forwards;
-          animation: loading 3s forwards;
+  -webkit-animation: loading 2s forwards;
+          animation: loading 2s forwards;
 }
 .loading .cercle {
   position: absolute;
+  top: 300px;
   border-radius: 50%;
   width: 160px;
   height: 160px;
@@ -96,13 +98,15 @@ body {
   width: 120px;
   height: 120px;
   position: absolute;
+  top: 320px;
   border: 10px dotted #FF79DA;
-  -webkit-animation: spinner 1s ease-in-out 400ms 2 forwards;
-          animation: spinner 1s ease-in-out 400ms 2 forwards;
+  -webkit-animation: spinner 2s ease-in-out 100ms 2 forwards;
+          animation: spinner 2s ease-in-out 100ms 2 forwards;
   z-index: 2;
 }
 .loading .icone-dinner {
   position: absolute;
+  top: 360px;
   font-size: 60px;
   color: #9356DC;
   z-index: 2;
@@ -273,7 +277,6 @@ main .Restaurants .restaurant__card .coeur-non-rempli {
 main .Restaurants .restaurant__card .coeur-non-rempli:hover {
   opacity: 1;
   color: #9356DC;
-  background-image: #9356DC;
 }
 main .Restaurants .restaurant__card .coeur-rempli {
   font-size: 23px;
@@ -287,7 +290,6 @@ main .Restaurants .restaurant__card .coeur-rempli {
 main .Restaurants .restaurant__card .coeur-rempli:hover {
   opacity: 1;
   color: #9356DC;
-  background-image: #9356DC;
   transform: scale(1.1);
 }
 
