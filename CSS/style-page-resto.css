@@ -291,6 +291,25 @@ footer .icone-devenir {
   }
 }
 @media screen and (max-width: 750px) {
+  main .contenu-page {
+    position: absolute;
+    top: 463px;
+    background-color: white;
+    border-radius: 40px 40px;
+    width: 90%;
+  }
+  main .conteneur__nom-resto_coeur {
+    gap: 0px;
+    margin-left: 15px;
+  }
+  main .conteneur__nom-resto_coeur .coeur-non-rempli {
+    position: absolute;
+    right: 34px;
+  }
+  main .conteneur__nom-resto_coeur .coeur-rempli {
+    position: absolute;
+    right: 34px;
+  }
   main .conteneur_entrees_plats_desserts {
     width: 100%;
   }
@@ -307,5 +326,11 @@ footer .icone-devenir {
     margin-top: 10px;
     margin-left: 120px;
     width: 60%;
+  }
+  footer {
+    position: absolute;
+    top: 1736px;
+    width: 90%;
+    height: 28%;
   }
 }/*# sourceMappingURL=style-page-resto.css.map */
