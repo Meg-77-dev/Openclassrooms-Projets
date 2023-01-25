@@ -322,6 +322,9 @@ footer .icone-devenir {
 }
 
 @media screen and (max-width: 990px) {
+  .loading {
+    height: 1624px;
+  }
   main .presentation-fonctionnement {
     display: flex;
     flex-direction: column;
@@ -351,6 +354,9 @@ footer .icone-devenir {
   }
 }
 @media screen and (max-width: 750px) {
+  .loading {
+    height: 2522px;
+  }
   main .fonctionnement .conteneur__etape {
     display: flex;
     flex-direction: column;
