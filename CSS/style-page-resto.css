@@ -312,6 +312,7 @@ footer .icone-devenir {
   }
   main .conteneur_entrees_plats_desserts {
     width: 100%;
+    margin-left: 15px;
   }
   main .conteneur_entrees_plats_desserts .conteneur__entrees {
     width: 100%;
